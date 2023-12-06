@@ -4,9 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <div>
-      <Button className='bg-emerald-500 text-white'>
-        Delete
-      </Button>
+      <Button className="bg-emerald-500 text-white">Delete</Button>
     </div>
-    )
+  )
 }
