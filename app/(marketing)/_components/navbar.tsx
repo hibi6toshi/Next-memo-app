@@ -1,7 +1,7 @@
 'use client'
 
 import { Logo } from './logo'
-import { ModeToggle } from '@/components/proveiders/mode-toggle'
+import { ModeToggle } from '@/components/mode-toggle'
 import { useScrollTop } from '@/hooks/useScrollTop'
 import { cn } from '@/lib/utils'
 
