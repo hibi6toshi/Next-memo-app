@@ -9,7 +9,7 @@ export const get = query({
     if (!identity) {
       throw new Error('Not authenticated')
     }
-    const documents = await ctx.db.query('documents')
+    const documents = await ctx.db.query('documents').collect()
 
     return documents
   },
