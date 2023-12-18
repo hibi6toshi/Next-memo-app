@@ -25,9 +25,11 @@ import {
 } from '@/components/ui/popover'
 import { api } from '@/convex/_generated/api'
 import { useSearch } from '@/hooks/use-search'
+import { useSettings } from '@/hooks/use-settings'
 import { cn } from '@/lib/utils'
 
 export const Navigation = () => {
+  const settings = useSettings()
   const search = useSearch()
   const pathname = usePathname()
   const isMobile = useMediaQuery('(max-width: 768px)')
@@ -145,7 +147,7 @@ export const Navigation = () => {
         <div>
           <UserItem />
           <Item label="Search" icon={Search} isSearch onClick={search.onOpen} />
-          <Item label="Setting" icon={Settings} onClick={() => {}} />
+          <Item label="Setting" icon={Settings} onClick={settings.onOpen} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
